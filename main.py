@@ -26,7 +26,7 @@ def brand_choice():
 
 def get_data(url):
     # open the xls file and reading articles
-    book = openpyxl.load_workbook(filename='C:\\Users\\chufy\\Desktop\\parser_zzap\\for_pars.xlsx')
+    book = openpyxl.load_workbook(filename='C:\\GitHub\\parser_zzap\\for_pars.xlsx')
     sheet = book.worksheets[0]
     len_sheet = len(sheet['A'])
     result_dict = {}
@@ -48,7 +48,7 @@ def get_data(url):
         options.set_preference("dom.webdriver.enabled", False)
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--headless")  # headless mode
-        s = Service("C:\\Users\\chufy\\Desktop\\parser_zzap\\geckodriver.exe")
+        s = Service("C:\\GitHub\\parser_zzap\\geckodriver.exe")
 
         # download html
         try:
